@@ -1,12 +1,117 @@
-.App {
-  text-align: center;
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  [class*="mobile hidden"],
+  [class*="tablet only"]:not(.mobile),
+  [class*="computer only"]:not(.mobile),
+  [class*="large screen only"]:not(.mobile),
+  [class*="widescreen only"]:not(.mobile),
+  [class*="or lower hidden"] {
+    display: none !important;
+  }
+  
+  .ui.mini.menu {  
+  top: 0;
+  left: 0;  
+  line-height: 1em;   
+  background-color: rgba(216,178,216,0.4);  
+  font-size: .1em;
+  text-align: justify;
+  font-weight: normal;
 }
 
-.App-header {  
-  height: 150px;
-  padding: 20px;
+#logo {
+  width:50%;
+}
+  #drawing-image {
+    max-width: 300px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
 }
 
-.App-intro {
-  font-size: large;
+/* Tablet / iPad Portrait */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  [class*="mobile only"]:not(.tablet),
+  [class*="tablet hidden"],
+  [class*="computer only"]:not(.tablet),
+  [class*="large screen only"]:not(.tablet),
+  [class*="widescreen only"]:not(.tablet),
+  [class*="or lower hidden"]:not(.mobile) {
+    display: none !important;
+  }
+
+  .ui.mini.menu {  
+  top: 0;
+  left: 0;  
+  line-height: 1em;   
+  background-color: rgba(216,178,216,0.4); 
+  font-size: 0.1em;
+  font-weight: normal;
+  text-align: justify;
+}
+
+#logo {
+  width:50%;
+}
+  #drawing-image {
+    max-width: 400px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+}
+
+/* Computer / Desktop / iPad Landscape */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  [class*="mobile only"]:not(.computer),
+  [class*="tablet only"]:not(.computer),
+  [class*="computer hidden"],
+  [class*="large screen only"]:not(.computer),
+  [class*="widescreen only"]:not(.computer),
+  [class*="or lower hidden"]:not(.tablet):not(.mobile) {
+    display: none !important;
+  }
+  #nav {
+    background-color: rgba(216,178,216,0.4);
+    background-image: url("./images/overlay.png");
+  }
+}
+
+/* Large Monitor */
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  [class*="mobile only"]:not([class*="large screen"]),
+  [class*="tablet only"]:not([class*="large screen"]),
+  [class*="computer only"]:not([class*="large screen"]),
+  [class*="large screen hidden"],
+  [class*="widescreen only"]:not([class*="large screen"]),
+  [class*="or lower hidden"]:not(.computer):not(.tablet):not(.mobile) {
+    display: none !important;
+  }
+
+   #nav {
+    background-color: rgba(216,178,216,0.4);
+    background-image: url("./images/overlay.png");
+  }
+}
+
+/* Widescreen Monitor */
+@media only screen and (min-width: 1920px) {
+  [class*="mobile only"]:not([class*="widescreen"]),
+  [class*="tablet only"]:not([class*="widescreen"]),
+  [class*="computer only"]:not([class*="widescreen"]),
+  [class*="large screen only"]:not([class*="widescreen"]),
+  [class*="widescreen hidden"],
+  [class*="widescreen or lower hidden"] {
+    display: none !important;
+  }
+
+  #nav {
+    background-color: rgba(216,178,216,0.4);
+    background-image: url("./images/overlay.png");
+  }
+  
 }

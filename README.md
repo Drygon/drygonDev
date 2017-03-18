@@ -18,3 +18,7 @@ modify content
 ` git add .
 `git commit -m "first commit"
 `git push -u origin master
+
+`firebase deploy
+
+so far works on firebase
